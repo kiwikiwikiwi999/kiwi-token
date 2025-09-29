@@ -1,64 +1,44 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#97ca3f">
-    <title>KIWI Token</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIWI Token </title>
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://kiwi-token.net/" />
-    
-    <!-- SEO Meta -->
-    <meta name="description" content="KIWI, Blum ağında bulunan, amacı, iddiası veya vaatleri olmayan bir tokendir. Şimdilik KIWI'yi Blum üzerinden alıp satabilirsin.">
-    <meta name="keywords" content="KIWI, token, kripto, Blum, TON, meme token, kripto para">
-    <meta name="author" content="KIWI Token">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="KIWI Token - The freshest cryptocurrency in the market. Join the KIWI community and discover the sweet taste of decentralized finance.">
+    <meta name="keywords" content="KIWI token, cryptocurrency, DeFi, blockchain, crypto investment, digital currency, KIWI coin">
+    <meta name="author" content="KIWI Token Team">
     <meta name="robots" content="index, follow">
     
-    <!-- Sosyal Medya Meta - Open Graph -->
-    <meta property="og:title" content="KIWI Token">
-    <meta property="og:description" content="KIWI, Blum ağında bulunan, amacı, iddiası veya vaatleri olmayan bir tokendir.">
-    <meta property="og:image" content="https://kiwi-token.net/kiwi-logo.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="300">
-    <meta property="og:image:height" content="300">
-    <meta property="og:site_name" content="KIWI Token">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="KIWI Token - Official Website">
+    <meta property="og:description" content="The freshest cryptocurrency in the market. Join the KIWI community today!">
+    <meta property="og:image" content="kiwi-logo.png">
+    <meta property="og:url" content="https://kiwi-token.net">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kiwi-token.net/">
-    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="KIWI Token">
     
-    <!-- Twitter Card -->
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KIWI Token - Official Website">
+    <meta name="twitter:description" content="The freshest cryptocurrency in the market. Join the KIWI community today!">
+    <meta name="twitter:image" content="kiwi-logo.png">
     <meta name="twitter:site" content="@KIWItokenn">
-    <meta name="twitter:title" content="KIWI Token">
-    <meta name="twitter:description" content="KIWI, Blum ağında bulunan token. Hemen Blum üzerinden alım satım yapabilirsin.">
-    <meta name="twitter:image" content="https://kiwi-token.net/kiwi-logo.png">
     
-    <!-- Favicon ve Touch Icons -->
-    <link rel="icon" href="/kiwi-logo.png">
-    <link rel="apple-touch-icon" href="/kiwi-logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/kiwi-logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/kiwi-logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/kiwi-logo.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="kiwi-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="kiwi-logo.png">
+    <link rel="apple-touch-icon" href="kiwi-logo.png">
+    <link rel="shortcut icon" href="kiwi-logo.png">
     
-    <!-- Mobil Optimize Meta -->
-    <meta name="format-detection" content="telephone=no">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="KIWI Token">
-    
-    <!-- Güvenlik Meta -->
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kiwi-token.net">
     
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Reset ve temel stiller */
         * {
             margin: 0;
             padding: 0;
@@ -81,7 +61,7 @@
             padding: 20px;
         }
         
-        /* Intro sayfası için gerekli stiller */
+        /* Intro Animation */
         .intro-container {
             position: fixed;
             top: 0;
@@ -96,9 +76,6 @@
             z-index: 9999;
             opacity: 1;
             transition: opacity 0.8s ease;
-            padding: 0 20px; /* Kenarlardan biraz boşluk ekleyerek içeriğin taşmasını önlüyoruz */
-            box-sizing: border-box;
-            text-align: center; /* Merkezi hizalama için eklendi */
         }
         
         .intro-container.fade-out {
@@ -128,51 +105,12 @@
             font-weight: 800;
             color: #464631;
             margin-top: 30px;
-            letter-spacing: 3px; /* Harf aralığını ana kısımdaki ile aynı yapıldı */
+            letter-spacing: 3px;
             opacity: 0;
             transition: all 0.6s ease;
-            text-align: center;
-            width: 100%;
-            padding: 0 20px;
-            box-sizing: border-box;
         }
         
-        /* Ana sayfa için animasyonlar */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes bounce {
-            0% { opacity: 0; transform: translateY(40px); }
-            60% { opacity: 1; transform: translateY(-10px); }
-            80% { transform: translateY(5px); }
-            100% { transform: translateY(0); }
-        }
-        
-        /* Ana Konteyner Stilleri */
-        .container {
-            width: 100%;
-            height: 100%;
-            background-color: white;
-            border-radius: 25px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px;
-            overflow-y: auto;
-            overflow-x: hidden;
-            opacity: 0;
-            transition: opacity 0.8s ease;
-            position: relative;
-            z-index: 1;
-            will-change: opacity;
-        }
-        
-        .container.fade-in {
-            opacity: 1;
-        }
-        
+        /* Green Background */
         .container-background {
             position: fixed;
             top: 0;
@@ -183,19 +121,47 @@
             z-index: 0;
             opacity: 0;
             transition: opacity 0.8s ease;
-            will-change: opacity;
         }
         
         .container-background.fade-in {
             opacity: 1;
         }
         
-        /* Header Stilleri */
+        /* Main Container */
+        .container {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .container.fade-in {
+            opacity: 1;
+        }
+        
+        /* First Screen */
+        .first-screen {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        /* Header */
         .header {
             margin-bottom: 30px;
-            animation: bounce 1s ease-out;
-            animation-play-state: paused;
-            will-change: transform;
         }
         
         .kiwi-title {
@@ -204,17 +170,11 @@
             font-weight: 800;
             color: #464631;
             letter-spacing: 3px;
-            text-align: center;
         }
         
-        /* Logo Image Stilleri */
+        /* Logo */
         .kiwi-image {
             margin-bottom: 30px;
-            text-align: center;
-            animation: fadeIn 1s ease-out 0.3s;
-            animation-fill-mode: both;
-            animation-play-state: paused;
-            will-change: transform, opacity;
         }
         
         .kiwi-image img {
@@ -225,247 +185,343 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        /* Açıklama Stilleri */
-        .description {
-            max-width: 80%;
-            width: 700px;
-            text-align: center;
-            font-size: 18px;
+        /* Contract Box */
+        .contract-wrapper {
+            margin-bottom: 30px;
+        }
+        
+        .contract-label {
+            font-size: 14px;
             font-weight: 700;
-            line-height: 1.4;
-            margin-bottom: 20px;
-            letter-spacing: 0.3px;
-            word-spacing: 1px;
-            animation: fadeIn 1s ease-out 0.6s;
-            animation-fill-mode: both;
-            animation-play-state: paused;
-            will-change: transform, opacity;
+            color: #464631;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
-        .description a {
-            color: #464631; 
-            font-weight: bold; 
-            text-decoration: underline;
-            transition: color 0.3s ease;
+        .contract-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(151, 202, 63, 0.1);
+            border: 2px solid #97ca3f;
+            border-radius: 50px;
+            padding: 14px 28px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
         }
         
-        .description a:hover {
-            color: #97ca3f;
+        .contract-box:hover {
+            transform: scale(1.05);
+            background: #97ca3f;
         }
         
-        /* Buton Stilleri */
+        .contract-box:hover .contract-text,
+        .contract-box:hover .copy-icon {
+            color: white;
+            fill: white;
+        }
+        
+        .contract-text {
+            font-family: 'Inconsolata', monospace;
+            font-size: 14px;
+            color: #464631;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        
+        .copy-icon {
+            width: 18px;
+            height: 18px;
+            fill: #97ca3f;
+            transition: fill 0.3s;
+        }
+        
+        .tooltip {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #97ca3f;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip.show {
+            opacity: 1;
+        }
+        
+        /* Social Buttons */
         .buttons {
             display: flex;
+            gap: 15px;
             justify-content: center;
-            margin-top: 20px;
-            width: 100%;
-            max-width: 700px;
-            animation: fadeIn 1s ease-out 0.9s;
-            animation-fill-mode: both;
-            animation-play-state: paused;
-            will-change: transform, opacity;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
         }
         
         .btn {
-            padding: 14px 24px;
+            padding: 14px 28px;
             background-color: #333;
             color: white;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
+            text-decoration: none;
+            font-weight: 700;
             font-size: 14px;
             text-transform: uppercase;
-            font-family: 'Inconsolata', monospace;
             letter-spacing: 1px;
+            border-radius: 4px;
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-decoration: none;
-            margin: 0 auto;
-            text-align: center;
-            display: block;
-            width: 80%;
-            max-width: 300px;
-            border-radius: 4px;
-        }
-        
-        .btn.btn-primary {
-            background-color: #97ca3f;
-            padding: 16px 28px;
-            font-size: 16px;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .btn:hover {
             transform: translateY(-2px);
+            background-color: #97ca3f;
             box-shadow: 0 6px 8px rgba(0,0,0,0.15);
         }
         
-        .btn.btn-primary:hover {
+        .social-icon {
+            width: 18px;
+            height: 18px;
+            fill: white;
+        }
+        
+        /* Buy Button */
+        .buy-button {
+            margin-bottom: 40px;
+        }
+        
+        .btn-primary {
+            padding: 18px 45px;
+            background-color: #97ca3f;
+            color: white;
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            border-radius: 6px;
+        }
+        
+        .btn-primary:hover {
             background-color: #87b52f;
         }
         
-        .btn:active {
-            transform: translateY(1px);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        /* Arrow */
+        .arrow-wrapper {
+            cursor: pointer;
+            animation: bounce 2s infinite;
         }
         
-        /* Nasıl Alınır Bölümü */
-        .subheader {
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .arrow-icon {
+            width: 40px;
+            height: 40px;
+            fill: #97ca3f;
+        }
+        
+        /* Second Screen */
+        .second-screen {
+            padding: 60px 0;
             width: 100%;
-            text-align: left;
-            margin-top: 30px;
-            animation: fadeIn 1s ease-out 1.2s;
-            animation-fill-mode: both;
-            padding-left: 40px;
-            max-width: 700px;
-            align-self: center;
-            animation-play-state: paused;
-            will-change: transform, opacity;
         }
         
-        .subtitle {
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-align: left;
-        }
-        
-        .steps {
-            margin-top: 15px;
-            width: 100%;
-            animation: fadeIn 1s ease-out 1.5s;
-            animation-fill-mode: both;
-            animation-play-state: paused;
-            will-change: transform, opacity;
-        }
-        
-        .steps ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .steps li {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
-            letter-spacing: 0.5px;
-        }
-        
-        .steps li:before {
-            content: "•";
-            position: absolute;
-            left: 5px;
-            color: #97ca3f;
-            font-size: 20px;
-            top: -1px;
-        }
-        
-        .steps li a {
-            color: #464631;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .steps li a.ton-link {
-            color: #464631;
-        }
-        
-        .steps li a.ton-link:hover {
-            color: #0088cc;
-        }
-        
-        .steps li a:hover {
-            color: #97ca3f;
-        }
-        
-        /* Satın Alma Butonu */
-        .buy-button {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            animation: fadeIn 1s ease-out 1.8s;
-            animation-fill-mode: both;
-            animation-play-state: paused;
-            will-change: transform, opacity;
-        }
-        
-        /* Yasal Uyarı Stili */
-        .disclaimer {
-            width: 100%;
-            max-width: 700px;
-            margin-top: 15px;
-            padding: 0 10px;
+        /* Kiwi Text */
+        .kiwi-text-block {
             text-align: center;
-            font-size: 10px;
-            line-height: 1.3;
-            color: #666;
-            opacity: 0.7;
-            animation: fadeIn 1s ease-out 1.5s;
-            animation-fill-mode: both;
-            animation-play-state: paused;
-            will-change: opacity;
+            margin-bottom: 40px;
         }
         
-        .disclaimer strong {
+        .kiwi-text {
+            font-family: 'Inconsolata', monospace;
+            font-size: 28px;
+            font-weight: 800;
+            color: #464631;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+        
+        /* Emoji Ticker - Full Screen */
+        .emoji-ticker {
+            height: 60px;
+            overflow: hidden;
+            margin-bottom: 50px;
+            position: relative;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+        }
+        
+        .emoji-track {
+            display: flex;
+            position: absolute;
+            animation: scrollLeft 30s linear infinite;
+            width: 200%;
+        }
+        
+        @keyframes scrollLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .emoji {
+            font-size: 40px;
+            padding: 0 20px;
+            animation: rotate 3s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Photo Gallery - 4 Columns */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 35px;
+            margin-bottom: 50px;
+            width: 100%;
+            padding: 0;
+        }
+        
+        .photo-item {
+            background: rgba(151, 202, 63, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 280px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .photo-item:nth-child(1) { height: 260px; }
+        .photo-item:nth-child(2) { height: 300px; }
+        .photo-item:nth-child(3) { height: 240px; }
+        .photo-item:nth-child(4) { height: 280px; }
+        .photo-item:nth-child(5) { height: 290px; }
+        .photo-item:nth-child(6) { height: 250px; }
+        .photo-item:nth-child(7) { height: 270px; }
+        .photo-item:nth-child(8) { height: 310px; }
+        .photo-item:nth-child(9) { height: 240px; }
+        .photo-item:nth-child(10) { height: 280px; }
+        .photo-item:nth-child(11) { height: 260px; }
+        .photo-item:nth-child(12) { height: 290px; }
+        
+        .photo-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(151, 202, 63, 0.4);
+            border-color: #87b52f;
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        
+        .lightbox-download {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #97ca3f;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
             font-weight: 700;
         }
         
-        /* Alt Marka Bölümü */
+        /* Footer */
         .just-kiwi {
             text-align: center;
-            margin-top: 15px;
-            margin-bottom: 5px;
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
             font-size: 18px;
             color: #464631;
             letter-spacing: 2px;
-            animation: fadeIn 1s ease-out 1.7s;
-            animation-fill-mode: both;
-            animation-play-state: paused;
-            will-change: opacity;
+            margin-top: 40px;
         }
         
-        /* Tam Ekran Butonu */
-        #fullscreen-button {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 1000;
-            font-family: 'Inconsolata', monospace;
-            opacity: 0;
-            transition: opacity 0.5s ease, background-color 0.3s ease;
-        }
-        
-        #fullscreen-button:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-        
-        #fullscreen-button.visible {
-            opacity: 1;
-        }
-        
-        /* Mobil Cihaz Uyumluluk Ayarları */
-        @media (max-width: 768px) {
-            #kiwi-logo-intro {
-                width: 200px !important;
-                height: 200px !important;
+        /* Tablet */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .photo-gallery {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
             }
             
-            #kiwi-text-intro {
-                font-size: 36px !important; /* Ana kısımdaki mobil font boyutuyla aynı */
-                letter-spacing: 2px; /* Mobil için daha dar harf aralığı */
-                max-width: 100%; /* Taşma olmaması için */
+            .emoji {
+                font-size: 35px;
+                padding: 0 18px;
+            }
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 15px;
+                border-radius: 15px;
+            }
+            
+            .kiwi-title {
+                font-size: 36px;
             }
             
             .kiwi-image img {
@@ -473,130 +529,59 @@
                 height: 200px;
             }
             
-            .kiwi-title {
-                font-size: 36px;
+            #kiwi-logo-intro {
+                width: 200px !important;
+                height: 200px !important;
             }
             
-            .container {
-                padding: 20px 10px;
-                border-radius: 15px;
+            #kiwi-text-intro {
+                font-size: 36px !important;
             }
             
-            .description, .buttons, .subheader, .disclaimer {
-                width: 95%;
-                max-width: 95%;
-                padding-left: 0;
-            }
-            
-            .description {
-                font-size: 16px;
+            .contract-text {
+                font-size: 11px;
             }
             
             .buttons {
                 flex-direction: column;
                 align-items: center;
-                gap: 15px;
+                gap: 10px;
             }
             
             .btn {
-                width: 90%;
-                padding: 12px 8px;
-                font-size: 12px;
-                text-align: center;
-                white-space: normal;
-            }
-            
-            .btn.btn-primary {
-                padding: 14px 10px;
-                font-size: 14px;
-            }
-            
-            .subheader {
-                margin-top: 25px;
-                padding-left: 15px;
-            }
-            
-            .subtitle {
-                font-size: 18px;
-            }
-            
-            .steps li {
-                font-size: 16px;
-                padding-left: 20px;
-                padding-right: 5px;
-                line-height: 1.3;
-                word-break: break-word;
-                white-space: normal;
-            }
-            
-            .steps li:before {
-                left: 0;
-                font-size: 18px;
-            }
-            
-            .disclaimer {
-                font-size: 9px;
-                line-height: 1.2;
-                margin-top: 20px;
-            }
-            
-            .just-kiwi {
-                font-size: 14px;
-                margin-top: 12px;
-            }
-        }
-        
-        /* Çok Küçük Ekranlar İçin Ek Ayarlar */
-        @media (max-width: 380px) {
-            .btn {
-                font-size: 11px;
-                white-space: normal;
-                width: 95%;
-            }
-            
-            .kiwi-image img {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .kiwi-title {
-                font-size: 32px;
-            }
-        }
-        
-        /* Kısa Ekranlar İçin Ayarlar */
-        @media (max-height: 700px) {
-            .kiwi-image img {
                 width: 180px;
-                height: 180px;
+                justify-content: center;
+                padding: 12px 20px;
             }
             
-            .kiwi-title {
-                font-size: 40px;
+            .photo-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
             }
             
-            .container {
-                padding: 15px;
+            .photo-item {
+                height: 180px !important;
+            }
+            
+            .kiwi-text {
+                font-size: 18px;
+                line-height: 1.5;
+            }
+            
+            .emoji {
+                font-size: 28px;
+                padding: 0 12px;
+            }
+            
+            .arrow-icon {
+                width: 35px;
+                height: 35px;
             }
         }
     </style>
-    
-    <!-- Yapısal Veri (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "KIWI Token",
-      "url": "https://kiwi-token.net",
-      "logo": "https://kiwi-token.net/kiwi-logo.png",
-      "sameAs": [
-        "https://x.com/KIWItokenn"
-      ]
-    }
-    </script>
 </head>
 <body>
-    <!-- Intro Bölümü -->
+    <!-- Intro Animation -->
     <div class="intro-container" id="intro-container">
         <div id="kiwi-logo-intro">
             <img src="kiwi-logo.png" alt="Kiwi Logo">
@@ -604,172 +589,281 @@
         <div id="kiwi-text-intro">KIWI</div>
     </div>
 
-    <!-- Yeşil arkaplan -->
+    <!-- Green Background -->
     <div class="container-background" id="container-background"></div>
 
-    <!-- Ana Sayfa Bölümü -->
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="" alt="KIWI">
+            <a href="" id="lightbox-download" class="lightbox-download" download>Download</a>
+        </div>
+    </div>
+
+    <!-- Main Container -->
     <div class="container" id="main-container">
-        <div class="header">
-            <h1 class="kiwi-title">KIWI</h1>
-        </div>
-        
-        <div class="kiwi-image">
-            <img src="kiwi-logo.png" alt="Kiwi" loading="lazy">
-        </div>
-        
-        <div class="description">
-            <p>KIWI, <a href="https://www.blum.io/" target="_blank" rel="noopener">Blum</a> ağında bulunan, amacı, iddiası veya vaatleri olmayan bir tokendir. Şimdilik KIWI'yi Blum üzerinden alıp satabilirsin. Arkadaşlarına KIWI'den bahsetmeyi, hakkında içerikler üretmeyi ve bizi X'te takip etmeyi unutma!</p>
-        </div>
-        
-        <div class="buttons">
-            <a href="https://x.com/KIWItokenn" target="_blank" rel="noopener" class="btn">X HESABIMIZA ULAŞ!</a>
-        </div>
-        
-        <div class="subheader">
-            <h2 class="subtitle">Nasıl KIWI token alabilirim?</h2>
-            <div class="steps">
-                <ul>
-                    <li><a href="https://t.me/blum/app?startapp=ref_BrT6JGaWn" target="_blank" rel="noopener">Telegram üzerinden Blum'u başlatın.</a></li>
-                    <li>Kripto cüzdanınızı Blum'a bağlayın.</li>
-                    <li><a href="https://ton.org/tr" target="_blank" rel="noopener" class="ton-link">Satın almak istediğiniz tutarın <span style="color: #0088cc;">TON</span> olarak kripto cüzdanınıza aktarın.</a></li>
-                    <li>Bağlantıya tıklayarak KIWI'ye ulaşın ve alım satımlara başlayın.</li>
-                </ul>
+        <!-- First Screen -->
+        <div class="first-screen">
+            <div class="header">
+                <h1 class="kiwi-title">KIWI</h1>
+            </div>
+            
+            <div class="kiwi-image">
+                <img src="kiwi-logo.png" alt="Kiwi">
+            </div>
+            
+            <div class="contract-wrapper">
+                <div class="contract-label">CONTRACT ADDRESS</div>
+                <div class="contract-box" onclick="copyContract()">
+                    <span class="contract-text">3Jyx7gJHWfib6c1iya4n9edCvs1BiTaKS2vR7qbLjupx</span>
+                    <svg class="copy-icon" viewBox="0 0 24 24">
+                        <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                    </svg>
+                    <div class="tooltip" id="tooltip">Copied!</div>
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <a href="https://x.com/KIWItokenn" target="_blank" class="btn">
+                    <svg class="social-icon" viewBox="0 0 24 24">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    FOLLOW
+                </a>
+                <a href="https://t.me/kiwitokenn" target="_blank" class="btn">
+                    <svg class="social-icon" viewBox="0 0 24 24">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+                    </svg>
+                    JOIN
+                </a>
+                <a href="https://www.instagram.com/kiwi.ceo" target="_blank" class="btn">
+                    <svg class="social-icon" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                    </svg>
+                    FOLLOW
+                </a>
+            </div>
+            
+            <div class="buy-button">
+                <a href="https://jup.ag/tokens/3Jyx7gJHWfib6c1iya4n9edCvs1BiTaKS2vR7qbLjupx" target="_blank" class="btn btn-primary">BUY ON JUPITER</a>
+            </div>
+            
+            <div class="arrow-wrapper" onclick="scrollToContent()">
+                <svg class="arrow-icon" viewBox="0 0 24 24">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                </svg>
             </div>
         </div>
         
-        <div class="buy-button">
-            <a href="https://t.me/blum/app?startapp=memepadjetton_KIWI_Gd73n-ref_10TROTIybQ" target="_blank" rel="noopener" class="btn btn-primary">KIWI TOKEN'A ULAŞ!</a>
-        </div>
-        
-        <div class="disclaimer">
-            <p><strong>Yasal Uyarı:</strong> KIWI, bağımsız ve topluluk odaklı bir dijital varlıktır. Herhangi bir şirket, marka veya kuruluşla bağlantılı değildir. Yatırım tavsiyesi değildir, kullanım tamamen kullanıcı sorumluluğundadır.</p>
-        </div>
-        
-        <div class="just-kiwi">
-            Just Kiwi
+        <!-- Second Screen -->
+        <div class="second-screen" id="content">
+            <div class="kiwi-text-block">
+                <div class="kiwi-text">
+                    kiwi kiwi kiwi kiwi kiwi kiwi kiwi<br>
+                    kiwi kiwi kiwi kiwi kiwi kiwi kiwi<br>
+                    kiwi kiwi kiwi kiwi kiwi kiwi kiwi<br>
+                    kiwi kiwi kiwi kiwi kiwi kiwi kiwi
+                </div>
+            </div>
+            
+            <div class="emoji-ticker">
+                <div class="emoji-track">
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                    <span class="emoji">🥝</span>
+                </div>
+            </div>
+            
+            <div class="photo-gallery">
+                <div class="photo-item" onclick="openLightbox('photo.1.jpg')">
+                    <img src="photo.1.jpg" alt="Kiwi 1">
+                </div>
+                <div class="photo-item" onclick="openLightbox('photo.2.jpg')">
+                    <img src="photo.2.jpg" alt="Kiwi 2">
+                </div>
+                <div class="photo-item" onclick="openLightbox('photo.3.jpg')">
+                    <img src="photo.3.jpg" alt="Kiwi 3">
+                </div>
+                <div class="photo-item" onclick="openLightbox('photo.4.jpg')">
+                    <img src="photo.4.jpg" alt="Kiwi 4">
+                </div>
+                <div class="photo-item" onclick="openLightbox('photo.5.jpg')">
+                    <img src="photo.5.jpg" alt="Kiwi 5">
+                </div>
+                <div class="photo-item" onclick="openLightbox('photo.6.jpg')">
+                    <img src="photo.6.jpg" alt="Kiwi 6">
+                </div>
+                <div class="photo-item" onclick="openLightbox('photo.7.jpg')">
+                    <img src="photo.7.jpg" alt="Kiwi 7">
+                </div>
+                <div class="photo-item" onclick="openLightbox('photo.8.jpg')">
+                    <img src="photo.8.jpg" alt="Kiwi 8">
+                </div>
+                <div class="photo-item" onclick="openLightbox('photo.9.jpg')">
+                    <img src="photo.9.jpg" alt="Kiwi 9">
+                </div>
+                <div class="photo-item" onclick="openLightbox('photo.10.jpg')">
+                    <img src="photo.10.jpg" alt="Kiwi 10">
+                </div>
+                <div class="photo-item" onclick="openLightbox('photo.11.jpg')">
+                    <img src="photo.11.jpg" alt="Kiwi 11">
+                </div>
+                <div class="photo-item" onclick="openLightbox('photo.12.jpg')">
+                    <img src="photo.12.jpg" alt="Kiwi 12">
+                </div>
+            </div>
+            
+            <div class="just-kiwi">
+                The Freshest Kiwi 🥝
+            </div>
         </div>
     </div>
     
-    <button id="fullscreen-button">Tam Ekran</button>
-    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Sayfa elemanlarını seçme
             const introContainer = document.getElementById('intro-container');
             const kiwiLogoIntro = document.getElementById('kiwi-logo-intro');
             const kiwiTextIntro = document.getElementById('kiwi-text-intro');
-            // Alt metin kaldırıldığı için burada referans almıyoruz
             const mainContainer = document.getElementById('main-container');
             const containerBackground = document.getElementById('container-background');
-            const fullscreenButton = document.getElementById('fullscreen-button');
             
-            // Animasyonlu elemanları seçme
-            const animatedElements = document.querySelectorAll('.header, .kiwi-image, .description, .buttons, .subheader, .steps, .disclaimer, .just-kiwi, .buy-button');
+            // Intro animation
+            setTimeout(() => {
+                kiwiLogoIntro.style.width = '300px';
+                kiwiLogoIntro.style.height = '300px';
+                kiwiLogoIntro.style.opacity = '1';
+            }, 300);
             
-            // Performans için bileşenleri ayrı ayrı ele alma
-            requestAnimationFrame(() => {
-                startIntroAnimation();
+            setTimeout(() => {
+                kiwiTextIntro.style.fontSize = '60px';
+                kiwiTextIntro.style.opacity = '1';
+            }, 1000);
+            
+            // Transition to main page
+            setTimeout(() => {
+                introContainer.classList.add('fade-out');
+                containerBackground.classList.add('fade-in');
+                
+                setTimeout(() => {
+                    introContainer.style.display = 'none';
+                    mainContainer.classList.add('fade-in');
+                }, 700);
+            }, 2500);
+        });
+        
+        // Copy contract address
+        function copyContract() {
+            const address = '3Jyx7gJHWfib6c1iya4n9edCvs1BiTaKS2vR7qbLjupx';
+            navigator.clipboard.writeText(address);
+            
+            const tooltip = document.getElementById('tooltip');
+            tooltip.classList.add('show');
+            
+            setTimeout(() => {
+                tooltip.classList.remove('show');
+            }, 2000);
+        }
+        
+        // Scroll to content
+        function scrollToContent() {
+            const content = document.getElementById('content');
+            content.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Lightbox functions
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxDownload = document.getElementById('lightbox-download');
+            
+            lightboxImg.src = imgSrc;
+            lightboxDownload.href = imgSrc;
+            lightbox.classList.add('active');
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+        }
+        
+        // Auto-resize grid items based on image height
+        function resizeGridItem(item) {
+            const grid = document.querySelector('.photo-gallery');
+            const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+            const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+            const rowSpan = Math.ceil((item.querySelector('img').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+            item.style.gridRowEnd = `span ${rowSpan}`;
+        }
+        
+        function resizeAllGridItems() {
+            const allItems = document.querySelectorAll('.photo-item');
+            allItems.forEach(resizeGridItem);
+        }
+        
+        function waitForImages() {
+            const allItems = document.querySelectorAll('.photo-item');
+            allItems.forEach(item => {
+                const img = item.querySelector('img');
+                if (img.complete) {
+                    resizeGridItem(item);
+                } else {
+                    img.onload = () => resizeGridItem(item);
+                }
             });
-            
-            // Intro animasyonunu başlatma fonksiyonu
-            function startIntroAnimation() {
-                // Logo animasyonu
-                setTimeout(() => {
-                    kiwiLogoIntro.style.width = '300px';
-                    kiwiLogoIntro.style.height = '300px';
-                    kiwiLogoIntro.style.opacity = '1';
-                }, 300);
-                
-                // KIWI başlık animasyonu
-                setTimeout(() => {
-                    kiwiTextIntro.style.fontSize = '60px'; // Ana kısımdaki font boyutuyla aynı yapıldı
-                    kiwiTextIntro.style.opacity = '1';
-                }, 1000);
-                
-                // Alt başlık animasyonu kaldırıldı
-                
-                // Intro tamamlanıp ana sayfaya geçiş
-                setTimeout(() => {
-                    introContainer.classList.add('fade-out');
-                    
-                    // Önce arka planı göster
-                    containerBackground.classList.add('fade-in');
-                    
-                    // Ana sayfaya geçiş
-                    setTimeout(() => {
-                        introContainer.style.display = 'none';
-                        mainContainer.classList.add('fade-in');
-                        
-                        // Ana sayfa animasyonlarını başlat
-                        startMainAnimations();
-                        
-                        // Tam ekran butonunu göster
-                        setTimeout(() => {
-                            fullscreenButton.classList.add('visible');
-                        }, 1000);
-                    }, 700);
-                }, 2500);
-            }
-            
-            // Ana sayfa animasyonlarını başlatma fonksiyonu
-            function startMainAnimations() {
-                animatedElements.forEach((element) => {
-                    element.style.animationPlayState = 'running';
-                });
-            }
-            
-            // Tam ekran işlevselliği
-            fullscreenButton.addEventListener('click', toggleFullScreen);
-            
-            // Tam ekran durumunu izleme
-            document.addEventListener('fullscreenchange', updateFullscreenButton);
-            document.addEventListener('webkitfullscreenchange', updateFullscreenButton);
-            document.addEventListener('mozfullscreenchange', updateFullscreenButton);
-            document.addEventListener('MSFullscreenChange', updateFullscreenButton);
-            
-            // Tam ekran geçiş fonksiyonu
-            function toggleFullScreen() {
-                if (!document.fullscreenElement && 
-                    !document.mozFullScreenElement && 
-                    !document.webkitFullscreenElement && 
-                    !document.msFullscreenElement) {
-                    // Tam ekrana geç
-                    if (document.documentElement.requestFullscreen) {
-                        document.documentElement.requestFullscreen();
-                    } else if (document.documentElement.msRequestFullscreen) {
-                        document.documentElement.msRequestFullscreen();
-                    } else if (document.documentElement.mozRequestFullScreen) {
-                        document.documentElement.mozRequestFullScreen();
-                    } else if (document.documentElement.webkitRequestFullscreen) {
-                        document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-                    }
-                } else {
-                    // Tam ekrandan çık
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen();
-                    } else if (document.msExitFullscreen) {
-                        document.msExitFullscreen();
-                    } else if (document.mozCancelFullScreen) {
-                        document.mozCancelFullScreen();
-                    } else if (document.webkitExitFullscreen) {
-                        document.webkitExitFullscreen();
-                    }
-                }
-            }
-            
-            // Tam ekran buton metnini güncelleme
-            function updateFullscreenButton() {
-                if (document.fullscreenElement || 
-                    document.mozFullScreenElement || 
-                    document.webkitFullscreenElement || 
-                    document.msFullscreenElement) {
-                    fullscreenButton.textContent = 'Çık';
-                } else {
-                    fullscreenButton.textContent = 'Tam Ekran';
-                }
-            }
+        }
+        
+        // Initialize grid layout after images load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(waitForImages, 100);
+            window.addEventListener('resize', resizeAllGridItems);
         });
     </script>
-    <script src="i18n.js"></script>
 </body>
-<html></html>                                                 
+</html>
+                
