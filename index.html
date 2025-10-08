@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -456,12 +455,17 @@
             position: relative;
             max-width: 90%;
             max-height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .lightbox img {
             max-width: 100%;
-            max-height: 80vh;
+            max-height: 70vh;
             object-fit: contain;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
         }
         
         .lightbox-close {
@@ -471,19 +475,73 @@
             color: white;
             font-size: 35px;
             cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .lightbox-close:hover {
+            transform: scale(1.1);
+        }
+        
+        .lightbox-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
         }
         
         .lightbox-download {
-            position: absolute;
-            bottom: -50px;
-            left: 50%;
-            transform: translateX(-50%);
             background: #97ca3f;
             color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
+            padding: 12px 28px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Inconsolata', monospace;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(151, 202, 63, 0.3);
+        }
+        
+        .lightbox-download:hover {
+            background: #87b52f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(151, 202, 63, 0.5);
+        }
+        
+        .lightbox-share-twitter {
+            background: #333;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            border: none;
+            font-family: 'Inconsolata', monospace;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        .lightbox-share-twitter:hover {
+            background: #97ca3f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(151, 202, 63, 0.5);
+        }
+        
+        .lightbox-download svg,
+        .lightbox-share-twitter svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
         }
         
         /* Footer */
@@ -578,6 +636,24 @@
                 width: 35px;
                 height: 35px;
             }
+            
+            .lightbox-buttons {
+                flex-direction: column;
+                width: 100%;
+                gap: 12px;
+            }
+
+            .lightbox-download,
+            .lightbox-share-twitter {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 24px;
+                font-size: 13px;
+            }
+
+            .lightbox img {
+                max-height: 60vh;
+            }
         }
     </style>
 </head>
@@ -594,11 +670,24 @@
     <div class="container-background" id="container-background"></div>
 
     <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-content">
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
             <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
             <img id="lightbox-img" src="" alt="KIWI">
-            <a href="" id="lightbox-download" class="lightbox-download" download>Download</a>
+            <div class="lightbox-buttons">
+                <a href="" id="lightbox-download" class="lightbox-download" download>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    </svg>
+                    Download
+                </a>
+                <button id="lightbox-share" class="lightbox-share-twitter" onclick="shareOnTwitterFromLightbox()">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    Share to X
+                </button>
+            </div>
         </div>
     </div>
 
@@ -667,26 +756,15 @@
         <div class="second-screen" id="content">
             <div class="kiwi-text-block">
                 <div class="kiwi-text">
-                    kiwi kiwi kiwi kiwi kiwi kiwi <br>
-                    kiwi kiwi kiwi kiwi kiwi kiwi <br>
-                    kiwi kiwi kiwi kiwi kiwi kiwi <br>
-                    kiwi kiwi kiwi kiwi kiwi kiwi <br>
+                    kiwi kiwi kiwi kiwi kiwi kiwi kiwi<br>
+                    kiwi kiwi kiwi kiwi kiwi kiwi kiwi<br>
+                    kiwi kiwi kiwi kiwi kiwi kiwi kiwi<br>
+                    kiwi kiwi kiwi kiwi kiwi kiwi kiwi<br>
                 </div>
             </div>
             
             <div class="emoji-ticker">
                 <div class="emoji-track">
-                    <span class="emoji">🥝</span>
-                    <span class="emoji">🥝</span>
-                    <span class="emoji">🥝</span>
-                    <span class="emoji">🥝</span>
-                    <span class="emoji">🥝</span>
-                    <span class="emoji">🥝</span>
-                    <span class="emoji">🥝</span>
-                    <span class="emoji">🥝</span>
-                    <span class="emoji">🥝</span>
-                    <span class="emoji">🥝</span>
-                    <span class="emoji">🥝</span>
                     <span class="emoji">🥝</span>
                     <span class="emoji">🥝</span>
                     <span class="emoji">🥝</span>
@@ -800,7 +878,6 @@
                 <div class="photo-item" onclick="openLightbox('photo.24.jpg')">
                     <img src="photo.24.jpg" alt="Kiwi 24">
                 </div>
-
             </div>
             
             <div class="just-kiwi">
@@ -875,6 +952,25 @@
             const lightbox = document.getElementById('lightbox');
             lightbox.classList.remove('active');
         }
+
+        function shareOnTwitterFromLightbox() {
+            const currentImage = document.getElementById('lightbox-img').src;
+            const imageName = currentImage.split('/').pop();
+    
+            const link = document.createElement('a');
+            link.href = currentImage;
+            link.download = imageName;
+            link.click();
+    
+            setTimeout(() => {
+                const text = 'The Freshest One 🥝\n\n$KIWI';
+                const siteUrl = 'https://kiwi-token.net';
+        
+                const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(siteUrl)}`;
+        
+                window.open(twitterUrl, '_blank', 'width=600,height=400');
+            }, 500);
+        }
         
         // Auto-resize grid items based on image height
         function resizeGridItem(item) {
@@ -909,6 +1005,4 @@
         });
     </script>
 </body>
-</html>
-                
-
+</html>                    
