@@ -1408,120 +1408,108 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // --- 1. SAFEST RANDOM SHUFFLE ---
+            const gallery = document.querySelector('.photo-gallery');
+            if (gallery) {
+                const items = Array.from(gallery.children);
+                
+                // Fisher-Yates Algorithm (The most mathematically perfect shuffling method)
+                for (let i = items.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    // Swapping elements within the array
+                    [items[i], items[j]] = [items[j], items[i]];
+                }
+
+                // Re-adding the shuffled list back to the gallery
+                items.forEach(item => gallery.appendChild(item));
+            }
+
+            // --- 2. INTRO ANIMATIONS ---
             const introContainer = document.getElementById('intro-container');
             const kiwiLogoIntro = document.getElementById('kiwi-logo-intro');
             const kiwiTextIntro = document.getElementById('kiwi-text-intro');
             const mainContainer = document.getElementById('main-container');
             const containerBackground = document.getElementById('container-background');
-            
-            // Intro animation
+
             setTimeout(() => {
                 kiwiLogoIntro.style.width = '300px';
                 kiwiLogoIntro.style.height = '300px';
                 kiwiLogoIntro.style.opacity = '1';
             }, 300);
-            
+
             setTimeout(() => {
                 kiwiTextIntro.style.fontSize = '60px';
                 kiwiTextIntro.style.opacity = '1';
             }, 1000);
-            
-            // Transition to main page
+
             setTimeout(() => {
                 introContainer.classList.add('fade-out');
                 containerBackground.classList.add('fade-in');
-                
+
                 setTimeout(() => {
                     introContainer.style.display = 'none';
                     mainContainer.classList.add('fade-in');
                 }, 700);
             }, 2500);
+
+            // --- 3. GALLERY LAYOUT AND RESIZING ---
+            // Calculate dimensions after photos have been shuffled
+            setTimeout(waitForImages, 100);
+            window.addEventListener('resize', resizeAllGridItems);
         });
-        
-        // Copy contract address
+
+        // --- HELPER FUNCTIONS ---
         function copyContract() {
             const address = '3Jyx7gJHWfib6c1iya4n9edCvs1BiTaKS2vR7qbLjupx';
             navigator.clipboard.writeText(address);
-            
             const tooltip = document.getElementById('tooltip');
             tooltip.classList.add('show');
-            
-            setTimeout(() => {
-                tooltip.classList.remove('show');
-            }, 2000);
+            setTimeout(() => { tooltip.classList.remove('show'); }, 2000);
         }
-        
-        // Scroll to content
+
         function scrollToContent() {
-            const content = document.getElementById('content');
-            content.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('content').scrollIntoView({ behavior: 'smooth' });
         }
-        
-        // Lightbox functions
+
         function openLightbox(imgSrc) {
             const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const lightboxDownload = document.getElementById('lightbox-download');
-            
-            lightboxImg.src = imgSrc;
-            lightboxDownload.href = imgSrc;
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox-download').href = imgSrc;
             lightbox.classList.add('active');
         }
-        
+
         function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.remove('active');
+            document.getElementById('lightbox').classList.remove('active');
         }
 
         function shareOnTwitterFromLightbox() {
             const currentImage = document.getElementById('lightbox-img').src;
-            const imageName = currentImage.split('/').pop();
-    
-            const link = document.createElement('a');
-            link.href = currentImage;
-            link.download = imageName;
-            link.click();
-    
-            setTimeout(() => {
-                const text = 'The Freshest One 🥝\n\n$KIWI\n\nCA: 3Jyx7gJHWfib6c1iya4n9edCvs1BiTaKS2vR7qbLjupx';
-        
-                const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
-        
-                window.open(twitterUrl, '_blank', 'width=600,height=400');
-            }, 500);
+            const text = 'The Freshest One 🥝\n\n$KIWI\n\nCA: 3Jyx7gJHWfib6c1iya4n9edCvs1BiTaKS2vR7qbLjupx';
+            const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+            window.open(twitterUrl, '_blank', 'width=600,height=400');
         }
-        
-        // Auto-resize grid items based on image height
+
         function resizeGridItem(item) {
             const grid = document.querySelector('.photo-gallery');
-            const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-            const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-            const rowSpan = Math.ceil((item.querySelector('img').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+            // Added fallback values to eliminate error margins (e.g., 0 or 10)
+            const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows')) || 10;
+            const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap')) || 0;
+            const img = item.querySelector('img');
+            const rowSpan = Math.ceil((img.getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
             item.style.gridRowEnd = `span ${rowSpan}`;
         }
         
         function resizeAllGridItems() {
-            const allItems = document.querySelectorAll('.photo-item');
-            allItems.forEach(resizeGridItem);
+            document.querySelectorAll('.photo-item').forEach(resizeGridItem);
         }
-        
+
         function waitForImages() {
-            const allItems = document.querySelectorAll('.photo-item');
-            allItems.forEach(item => {
+            document.querySelectorAll('.photo-item').forEach(item => {
                 const img = item.querySelector('img');
-                if (img.complete) {
-                    resizeGridItem(item);
-                } else {
-                    img.onload = () => resizeGridItem(item);
-                }
+                if (img.complete) { resizeGridItem(item); } 
+                else { img.onload = () => resizeGridItem(item); }
             });
         }
-        
-        // Initialize grid layout after images load
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(waitForImages, 100);
-            window.addEventListener('resize', resizeAllGridItems);
-        });
     </script>
 </body>
 </html>        
